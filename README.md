@@ -16,7 +16,7 @@ Install gems:
 Edit config/database.yml to set up database connection.
 
 Clickatell is reliable and not so expensive platform for sending sms messages,
-you can set up your Developers' Central account (here)[https://www.clickatell.com/register/].
+you can set up your Developers' Central account [here](https://www.clickatell.com/register/).
 Then, edit config/secrets.yml to set up clickatell connection.
 
 Create database:
