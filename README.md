@@ -1,4 +1,4 @@
-beholder
+beholder [![Code Climate](https://codeclimate.com/github/growthrepublic/beholder.png)](https://codeclimate.com/github/growthrepublic/beholder)
 ========
 
 Beholder is watching your applications and notifies you about any breakdowns by sending sms message.
