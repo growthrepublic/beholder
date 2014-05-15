@@ -1,0 +1,33 @@
+.page-header
+  = link_to new_app_path, :class => 'btn btn-primary' do
+    %span.glyphicon.glyphicon-plus
+    New App
+  %h1 Listing apps
+
+.table-responsive
+  %table.table.table-striped.table-bordered.table-hover
+    %thead
+      %tr
+        %th Name
+        %th Url
+        %th Server
+        %th Status
+        %th{ colspan: 3 }
+
+    %tbody
+      - @apps.each do |app|
+        %tr
+          %td
+            = app.name
+            - if app.repository_url?
+              = link_to fa_icon("github-alt"), app.repository_url
+            - if app.project_url?
+              = link_to fa_icon("trello"), app.project_url
+          %td= link_to app.url, app.url
+          %td= app.server
+          %td{ class: app.aasm_state }
+            = app.aasm_state
+            = "for " + distance_of_time_in_words_to_now(app.updated_at)
+          %td= link_to 'Show', app
+          %td= link_to 'Edit', edit_app_path(app)
+          %td= link_to 'Destroy', app, :data => { confirm: 'Are you sure?' }, :method => :delete

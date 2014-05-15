@@ -1,0 +1,24 @@
+.page-header
+  = link_to apps_path, :class => 'btn btn-default' do
+    %span.glyphicon.glyphicon-list-alt
+    Back
+  = link_to edit_app_path(@app), :class => 'btn btn-primary' do
+    %span.glyphicon.glyphicon-pencil
+    Edit
+  %h1 Show app
+
+%dl.dl-horizontal
+  %dt Name:
+  %dd= @app.name
+  %dt Url:
+  %dd= link_to @app.url, @app.url
+  %dt Server:
+  %dd= @app.server
+  %dt Status:
+  %dd= @app.aasm_state
+  %dt Repository url:
+  %dd= link_to @app.repository_url, @app.repository_url
+  %dt Project url:
+  %dd= link_to @app.project_url, @app.project_url
+  %dt Description:
+  %dd= @app.description

@@ -1,0 +1,10 @@
+/config/database.yml
+/config/secrets.yml
+/config/deployment.rb
+/config/newrelic.yml
+/log/*
+/tmp/*
+/public/system/*
+/coverage/
+/spec/tmp/*
+.htpasswd

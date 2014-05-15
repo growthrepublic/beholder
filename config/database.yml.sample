@@ -1,0 +1,27 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: beholder
+  pool: 5
+  username: app
+  password:
+
+test: &test
+  adapter: postgresql
+  encoding: unicode
+  database: beholder_test
+  pool: 5
+  username: app
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: beholder_production
+  host: localhost
+  pool: 5
+  username: app
+  password:
+
+cucumber:
+  <<: *test
