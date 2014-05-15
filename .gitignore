@@ -1,6 +1,6 @@
 /config/database.yml
 /config/secrets.yml
-/config/deployment.rb
+/config/deploy.rb
 /config/newrelic.yml
 /log/*
 /tmp/*
